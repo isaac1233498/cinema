@@ -1,16 +1,12 @@
 package com.cine.dto;
 
-import java.io.InputStream;
-import java.net.URI;
-
-import org.apache.tomcat.util.file.ConfigurationSource.Resource;
-//import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.RepresentationModel;
 
 import com.cine.model.Cliente;
 import com.cine.model.Empleado;
 
-public class VentaDTO /*extends ResourceSupport*/{
-/*
+public class VentaDTO extends RepresentationModel<VentaDTO>{
+
 	private Integer idVenta;
 	private Cliente cliente;
 	private Empleado empleado;
@@ -38,5 +34,5 @@ public class VentaDTO /*extends ResourceSupport*/{
 	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
-	 */
+	 
 }

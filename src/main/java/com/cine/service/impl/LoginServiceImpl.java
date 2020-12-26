@@ -1,11 +1,12 @@
 package com.cine.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.cine.model.Usuario;
 import com.cine.repo.ILoginRepo;
 import com.cine.service.ILoginService;
-
+@Component
 public class LoginServiceImpl implements ILoginService{
 
 	@Autowired

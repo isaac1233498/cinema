@@ -3,7 +3,7 @@ package com.cine.controller;
 import java.net.URI;
 import java.util.List;
 
-//import javax.validation.Valid;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,16 +24,15 @@ import com.cine.exception.ModeloNotFoundException;
 import com.cine.model.Cliente;
 import com.cine.service.IClienteService;
 
-/*@RestController
-@RequestMapping("/cliente")*/
+@RestController
+@RequestMapping("/cliente")
 public class ClienteController {
-/*
+	
 	@Autowired
 	public IClienteService service;
 
-	@GetMapping
-	public ResponseEntity<List<Cliente>> listar() {
-		List<Cliente> lista = service.listar();
+	public ResponseEntity<List<Cliente>> listar(){
+		List<Cliente> lista= service.listar();
 		return new ResponseEntity<List<Cliente>>(lista, HttpStatus.OK);
 	}
 
@@ -45,7 +44,7 @@ public class ClienteController {
 		}
 		return new ResponseEntity<Cliente>(cli, HttpStatus.OK);
 	}
-
+ 
 	// nivel 1
 	@GetMapping("/pageable")
 	public ResponseEntity<Page<Cliente>> listarPageable(Pageable pageable) {
@@ -62,8 +61,7 @@ public class ClienteController {
 				.buildAndExpand(cliente.getIdCliente()).toUri();
 		return ResponseEntity.created(location).build();
 	}
-	
-	
+
 	@PutMapping
 	public ResponseEntity<Cliente> modificar(@Valid @RequestBody Cliente cliente){
 		Cliente cli = service.modificar(cliente);
@@ -79,5 +77,4 @@ public class ClienteController {
 		service.eliminar(id);
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
-*/
 }

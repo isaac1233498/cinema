@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.cine.model.Empleado;
 import com.cine.repo.IEmpleadoRepo;
 import com.cine.service.IEmpleadoService;
-
+@Component
 public class EmpleadoServiceImpl implements IEmpleadoService {
 
 	@Autowired

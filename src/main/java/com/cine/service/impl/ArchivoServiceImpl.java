@@ -3,11 +3,13 @@ package com.cine.service.impl;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.cine.model.Archivo;
 import com.cine.repo.IArchivoRepo;
 import com.cine.service.IArchivoService;
 
+@Component
 public class ArchivoServiceImpl implements IArchivoService{
 
 	@Autowired

@@ -6,24 +6,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Component;
 
 import com.cine.model.Cliente;
 import com.cine.repo.IClienteRepo;
 import com.cine.service.IClienteService;
 
+@Component
 public class ClienteServiceImpl implements IClienteService{
 
 	@Autowired
 	private IClienteRepo repo;
 
 	@Override
-	public Cliente registrar(Cliente obj) {
-		return repo.save(obj);
+	public Cliente registrar(Cliente cli) {
+		return repo.save(cli);
 	}
 
 	@Override
-	public Cliente modificar(Cliente obj) {
-		return repo.save(obj);
+	public Cliente modificar(Cliente cli) {
+		return repo.save(cli);
 	}
 
 	@Override

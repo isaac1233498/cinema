@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.cine.model.Funcion;
 import com.cine.repo.IFuncionRepo;
 import com.cine.service.IFuncionService;
-
+@Component
 public class FuncionServiceImpl implements IFuncionService{
 
 	@Autowired

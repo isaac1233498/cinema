@@ -25,12 +25,12 @@ public class Cliente {
 	@Column(name = "apell_cliente", nullable = false, length = 70)
 	private String apell_cliente;
 
-	@Size(min = 10, max = 10, message = "ci debe tener un minimo de 10 caracteres")
-	@Column(name = "ci", nullable = false, length = 10)
+	@Size(min = 8, max = 8, message = "ci debe tener un minimo de 10 caracteres")
+	@Column(name = "ci", nullable = false, length = 8)
 	private String ci;
 
 	@Size(min = 3, max = 150, message = "Dirección debe tener minimo 3 caracteres")
-	@Column(name = "dir_empleado", nullable = false, length = 70)
+	@Column(name = "dir_empleado", nullable = false, length = 150)
 	private String dir_empleado;
 
 	@Size(min = 9, max = 9, message = "Telefono debe tener 9 caracteres")
